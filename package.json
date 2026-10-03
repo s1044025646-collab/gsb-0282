@@ -1,0 +1,23 @@
+{
+  "name": "single-symbol-limit-matcher",
+  "version": "1.0.0",
+  "private": true,
+  "description": "本地模拟单品限价订单簿撮合与成交回放后端（仅 API 与 CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --disable-warning=ExperimentalWarning dist/src/server.js",
+    "serve": "node --disable-warning=ExperimentalWarning dist/src/cli.js serve",
+    "cli": "node --disable-warning=ExperimentalWarning dist/src/cli.js",
+    "test": "node --disable-warning=ExperimentalWarning --import tsx --test tests/*.test.ts",
+    "demo": "node --disable-warning=ExperimentalWarning dist/src/cli.js demo --reset"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
