@@ -1,0 +1,15 @@
+{
+  "name": "limit-order-book-sim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "本地模拟单品限价订单撮合与成交回放后端（仅模拟，不连接真实交易）",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/engine.test.js",
+    "start": "npm run build && node dist/src/server.js",
+    "cli": "node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/demo.js"
+  }
+}
+
